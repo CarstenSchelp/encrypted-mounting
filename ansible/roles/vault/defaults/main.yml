@@ -1,10 +1,12 @@
 ---
 # Install
-vault_version: "latest"
+vault_version: "1.13.3"
+# "latest", implicit or not, does not work when building other URLs
+# check for tags at https://hub.docker.com/_/vault
 vault_directory: "/opt/vault"
 
 # General settings
-vault_domain: "vault.{{ inventory_hostname }}"
+vault_domain: "vault.{{ fqdn }}"
 vault_port: 8200
 vault_url: "https://{{ vault_domain }}"
 vault_log_level: "ERROR"

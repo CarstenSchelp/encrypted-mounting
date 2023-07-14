@@ -1,9 +1,9 @@
 ---
 - name: Pull Docker image
   docker_image:
-    name: vault
+    name: "vault:{{ vault_version }}""
     source: pull
-    tag: "{{ vault_version }}"
+    #tag: "{{ vault_version }}"
 
 - name: Render vault config
   template:

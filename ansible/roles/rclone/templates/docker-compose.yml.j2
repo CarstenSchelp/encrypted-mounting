@@ -15,7 +15,7 @@ services:
       - /root/rclone-env
     environment:
       - LOG_LEVEL={{ log_level }}
-      - SERVER_URL=https://mount.{{ inventory_hostname }}
+      - SERVER_URL=https://mount.{{ fqdn }}
       - USERS_CONFIG_PATH=/usr/local/etc
       - ADMIN_CONFIG_FILE=/etc/rclone.conf
       - CACHE_DIR=/cache
@@ -103,7 +103,7 @@ services:
       - redis
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.mount.rule=Host(`mount.{{ inventory_hostname }}`)"
+      - "traefik.http.routers.mount.rule=Host(`mount.{{ fqdn }}`)"
       - "traefik.http.routers.mount.tls=true"
       - "traefik.http.routers.mount.tls.certresolver=le"
       - "traefik.http.routers.mount.entrypoints=https"
