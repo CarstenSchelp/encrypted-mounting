@@ -1,6 +1,6 @@
 ---
 - hosts:
-    - localhost
+  - localhost
   become: true
   vars_files:
     - vars/default.yml
