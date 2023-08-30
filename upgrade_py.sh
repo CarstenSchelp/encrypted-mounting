@@ -6,3 +6,6 @@ add-apt-repository -y ppa:deadsnakes/ppa
 
 apt install python3.9
 python3.9 --version
+
+update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 1
+
