@@ -1,0 +1,14 @@
+---
+# run with - e "ansible_python_interpreter=/usr/bin/python3.9"
+- hosts:
+  - localhost
+  become: true
+  vars_files:
+    - vars/default.yml
+
+  roles:
+    # - common
+    - docker
+    - traefik
+    - vault
+    - rclone
