@@ -7,7 +7,7 @@
     - vars/default.yml
 
   roles:
-    # - common
+    - common
     - docker
     - traefik
     - vault

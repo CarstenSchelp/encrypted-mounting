@@ -1,7 +1,7 @@
 ---
 admin_username: admin
 log_level: ERROR
-fqdn: 'crymo04.arv43.src.surf-hosted.nl'
+fqdn: 'crymo1522.arv43.src.surf-hosted.nl'
 
 SRAM_URL: '{{ lookup("ansible.builtin.env", "SRAM_URL", default="https://sram.surf.nl") }}'
 

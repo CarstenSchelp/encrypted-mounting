@@ -1,0 +1,7 @@
+---
+- hosts:
+  - localhost
+  tasks:
+    - name: fqdn
+      debug:
+        var: fqdn
